@@ -20,6 +20,7 @@ def generate_template_content(json_data,file_name):
         csvfile = open(file_name+'.csv', 'wt')
         try:
 	        writer=csv.writer(csvfile)
+                writer.writerow(['System Information'])
                 writer.writerow(['CPU\'s',json_data['cpus']])
                 writer.writerow(['Memory MB',json_data['memory_mb']])
                 writer.writerow(['ipmi_address',json_data['ipmi_address']])
@@ -30,6 +31,11 @@ def generate_template_content(json_data,file_name):
                 writer.writerow(['Product UUID',json_data['extra']['system']['product']['uuid']])
                 writer.writerow(['Product Vendor',json_data['extra']['system']['product']['vendor']])
                 writer.writerow(['Product Version',json_data['extra']['system']['product']['version']])
+                writer.writerow(['Kernel Arch',json_data['extra']['system']['kernel']['arch']])
+                writer.writerow(['Kernel Version',json_data['extra']['system']['kernel']['version']])
+                writer.writerow(['Bios Vendor',json_data['extra']['firmware']['bios']['vendor']])
+                writer.writerow(['Bios Version',json_data['extra']['firmware']['bios']['version']])
+                writer.writerow(['Bios Date',json_data['extra']['firmware']['bios']['date']])
                 writer.writerow([])
                 writer.writerow(['NIC Information'])
                 writer.writerow(['NIC','IP','MAC']);
@@ -50,6 +56,7 @@ def generate_template_content(json_data,file_name):
                 for disk in json_data['inventory']['disks']:
                         writer.writerow([disk['name'],disk['vendor'],disk['size']])
                 writer.writerow([])
+
 
 
         finally:

@@ -1,3 +1,4 @@
+System Information
 CPU's,1
 Memory MB,8192
 ipmi_address,
@@ -8,6 +9,11 @@ Product Name,KVM
 Product UUID,F22421D9-7ED6-4279-B66E-6D7942B2C707
 Product Vendor,Red Hat
 Product Version,"RHEL 7.0.0 PC (i440FX + PIIX, 1996)"
+Kernel Arch,x86_64
+Kernel Version,3.10.0-327.22.2.el7.x86_64
+Bios Vendor,Seabios
+Bios Version,0.5.1
+Bios Date,01/01/2011
 
 NIC Information
 NIC,IP,MAC
@@ -22,4 +28,5 @@ Physid,Product,Vendor,Frequency
 Disks Information
 Name,Vendor,Size
 /dev/vda,0x1af4,53687091200
+0
 
