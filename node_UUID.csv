@@ -1,11 +1,17 @@
-NIC Information
-NIC,IP,MAC
-eth0,192.0.2.100,00:87:66:1c:ea:36
-
-CPUs,1
+CPU's,1
 Memory MB,8192
 ipmi_address,
 Boot Interface,00:87:66:1c:ea:36
+OS Version,CentOS Linux release 7.2.1511 (Core)
+OS Vendor,CentOS
+Product Name,KVM
+Product UUID,F22421D9-7ED6-4279-B66E-6D7942B2C707
+Product Vendor,Red Hat
+Product Version,"RHEL 7.0.0 PC (i440FX + PIIX, 1996)"
+
+NIC Information
+NIC,IP,MAC
+eth0,192.0.2.100,00:87:66:1c:ea:36
 
 CPU Information
 Physical Count,1
