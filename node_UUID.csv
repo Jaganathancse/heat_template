@@ -1,0 +1,14 @@
+NIC Information
+NIC,IP,MAC
+eth0,192.0.2.100,00:87:66:1c:ea:36
+
+Memory MB,8192
+ipmi_address,
+
+CPU Information
+Count,Model Name,Architecture,Frequency
+1,Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz,x86_64,2300.004
+
+Disks Information
+Name,Vendor,Size
+/dev/vda,0x1af4,53687091200
