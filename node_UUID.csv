@@ -2,13 +2,18 @@ NIC Information
 NIC,IP,MAC
 eth0,192.0.2.100,00:87:66:1c:ea:36
 
+CPUs,1
 Memory MB,8192
 ipmi_address,
+Boot Interface,00:87:66:1c:ea:36
 
 CPU Information
-Count,Model Name,Architecture,Frequency
-1,Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz,x86_64,2300.004
+Physical Count,1
+Logical Count,1
+Physid,Product,Vendor,Frequency
+401,Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz,Intel Corp.,2000000000.0
 
 Disks Information
 Name,Vendor,Size
 /dev/vda,0x1af4,53687091200
+

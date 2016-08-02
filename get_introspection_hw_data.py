@@ -15,7 +15,7 @@ def get_introspection_json_data(node_uid):
         data=json.loads(output)
         return data
 
-#To generate the csv file with introspection hardware information
+#To generate the heat template file content
 def generate_template_content(json_data,file_name):
         csvfile = open(file_name+'.csv', 'wt')
         try:
@@ -25,14 +25,18 @@ def generate_template_content(json_data,file_name):
                 for key in json_data['all_interfaces']:
                         writer.writerow([key,json_data['all_interfaces'][key]['ip'],json_data['all_interfaces'][key]['mac']])
                 writer.writerow([])
-
+                writer.writerow(['CPUs',json_data['cpus']])
                 writer.writerow(['Memory MB',json_data['memory_mb']])
                 writer.writerow(['ipmi_address',json_data['ipmi_address']])
+                writer.writerow(['Boot Interface',json_data['boot_interface']])
                 writer.writerow([])
                 writer.writerow(['CPU Information'])
-                writer.writerow(['Count','Model Name','Architecture','Frequency'])
-                writer.writerow([json_data['inventory']['cpu']['count'],json_data['inventory']['cpu']['model_name'],json_data['inventory']['cpu']['architecture'],
-                        json_data['inventory']['cpu']['frequency']])
+                writer.writerow(['Physical Count',json_data['extra']['cpu']['physical']['number']])
+                writer.writerow(['Logical Count',json_data['extra']['cpu']['logical']['number']])
+                writer.writerow(['Physid','Product','Vendor','Frequency'])
+                for cpu_key,cpu_value in json_data['extra']['cpu'].iteritems():
+                        if cpu_key.startswith('physical_'):
+                                writer.writerow([cpu_value['physid'],cpu_value['product'],cpu_value['vendor'],cpu_value['frequency']])
                 writer.writerow([])
                 writer.writerow(['Disks Information'])
                 writer.writerow(['Name','Vendor','Size'])
@@ -42,6 +46,7 @@ def generate_template_content(json_data,file_name):
         finally:
                 csvfile.close()
         return
+
 
 #To reads all the nodes uid and returns list
 def get_nodes_list():
