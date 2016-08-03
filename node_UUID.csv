@@ -15,19 +15,50 @@ Bios Vendor,Seabios
 Bios Version,0.5.1
 Bios Date,01/01/2011
 
+System Vendor Information
+Manufacturer,Red Hat
+Product Name,KVM
+Serial Number,Not Specified
+
 NIC Information
 NIC,IP,MAC
 eth0,192.0.2.100,00:87:66:1c:ea:36
 
 CPU Information
+count,1
+frequency,2300.004
+architecture,x86_64
+model_name,Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz
+
+CPU Extra Information
 Physical Count,1
 Logical Count,1
 Physid,Product,Vendor,Frequency
 401,Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz,Intel Corp.,2000000000.0
 
 Disks Information
-Name,Vendor,Size
-/dev/vda,0x1af4,53687091200
+Name,Vendor,Size,Rotational,Serial,model
+/dev/vda,0x1af4,53687091200,True,,
+
+Disks Extra Information
+Logical Count,1
+vda
+physical_block_size,512
+rotational,1
+vendor,0x1af4
+optimal_io_size,0
+size,53
+
+Root Disk Information
+rotational,True
+vendor,0x1af4
+name,/dev/vda
+wwn_vendor_extension,
+wwn_with_extension,
+model,
+wwn,
+serial,
+size,53687091200
 
 Network Information
 eth0
