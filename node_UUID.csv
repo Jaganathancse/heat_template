@@ -28,5 +28,61 @@ Physid,Product,Vendor,Frequency
 Disks Information
 Name,Vendor,Size
 /dev/vda,0x1af4,53687091200
-0
+
+Network Information
+eth0
+vlan-challenged,off [fixed]
+rx-vlan-offload,off [fixed]
+tx-vlan-stag-hw-insert,off [fixed]
+rx-vlan-stag-filter,off [fixed]
+tx-checksumming,on
+tx-nocache-copy,off
+tx-gso-robust,off [fixed]
+netns-local,off [fixed]
+ipv4-network,192.0.2.0
+serial,00:87:66:1c:ea:36
+large-receive-offload,off [fixed]
+tx-checksumming/tx-checksum-ipv6,off [fixed]
+tx-checksumming/tx-checksum-ipv4,off [fixed]
+loopback,off [fixed]
+tx-mpls-segmentation,off [fixed]
+tx-ipip-segmentation,off [fixed]
+tx-udp_tnl-segmentation,off [fixed]
+tx-gre-segmentation,off [fixed]
+fcoe-mtu,off [fixed]
+tcp-segmentation-offload/tx-tcp-ecn-segmentation,on
+vendor,"Red Hat, Inc"
+tx-checksumming/tx-checksum-fcoe-crc,off [fixed]
+ipv4,192.0.2.100
+highdma,on [fixed]
+ipv4-cidr,24
+rx-vlan-stag-hw-parse,off [fixed]
+tx-vlan-offload,off [fixed]
+product,Virtio network device
+udp-fragmentation-offload,on
+latency,0
+tx-checksumming/tx-checksum-sctp,off [fixed]
+driver,virtio_net
+tx-sit-segmentation,off [fixed]
+busy-poll,off [fixed]
+scatter-gather/tx-scatter-gather-fraglist,off [fixed]
+tx-checksumming/tx-checksum-ip-generic,on
+generic-receive-offload,on
+rx-all,off [fixed]
+tcp-segmentation-offload,on
+tcp-segmentation-offload/tx-tcp6-segmentation,on
+rx-checksumming,on [fixed]
+tcp-segmentation-offload/tx-tcp-segmentation,on
+generic-segmentation-offload,on
+tx-fcoe-segmentation,off [fixed]
+tx-lockless,off [fixed]
+ipv4-netmask,255.255.255.0
+businfo,pci@0000:00:03.0
+ntuple-filters,off [fixed]
+rx-vlan-filter,on [fixed]
+receive-hashing,off [fixed]
+scatter-gather/tx-scatter-gather,on
+link,yes
+rx-fcs,off [fixed]
+scatter-gather,on
 
